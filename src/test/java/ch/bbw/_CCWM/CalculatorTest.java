@@ -21,6 +21,8 @@ public class CalculatorTest {
 		testee = new Calculator();
 	}
 
+	//8 Test mit Summe
+	
 	@Test
 	public void testSummeZweiPositiveIsOk() {
 		assertTrue(testee.summe(10, 25) == 35);
@@ -56,18 +58,54 @@ public class CalculatorTest {
 		assertTrue(testee.summe(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
 	}
 
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testSummeEinePositiveEineMaxValueArithmeticException() {
+		testee.summe(10, Integer.MAX_VALUE);
+	}
 	
+	//8 Test mit Differenz
 	
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
 	
-	@Test(expected=java.lang.ArithmeticException.class)
-	public void testSummeEinePositiveEineMaxValueArithmeticException() {
-		testee.summe(10, Integer.MAX_VALUE);
+	@Test
+	public void testDifferenzEinNegativEinPositivIsOk() {
+		assertTrue(testee.differenz((-5), 10) == (-15));
+	}
+
+	@Test
+	public void testDifferenzZweiGleichIsOk() {
+		assertTrue(testee.differenz(10, 10) == 0);
 	}
 	
+	@Test
+	public void testDifferenzZweiNegativIsOk() {
+		assertTrue(testee.differenz(-10, -20) == 10);
+	}
+	
+	@Test
+	public void testDifferenzZweiNullIsNull() {
+		assertTrue(testee.differenz(0, 0) == 0);
+	}
+	
+	@Test
+	public void testDifferenzZweiNegativeArithmeticExceptionNotRaised() throws IndexOutOfBoundsException  {
+		testee.differenz((-7), (-7));
+	}
+	
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDifferenzEinePositiveEineMinValueArithmeticException() {
+		testee.differenz(20, Integer.MIN_VALUE);
+	}
+	
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDifferenzEineMinValueEineMaxValueArithmeticException() {
+		testee.differenz(Integer.MIN_VALUE, Integer.MAX_VALUE);
+	}
+	
+	//8 Test mit Divisio
 	
 	@Test(expected = ArithmeticException.class)
 	public void testDivisionArithmeticException() {

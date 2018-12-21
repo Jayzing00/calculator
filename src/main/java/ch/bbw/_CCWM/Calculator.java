@@ -23,8 +23,14 @@ public class Calculator {
 	
 	public int differenz(int value1, int value2) {
 
-		return value1 - value2;
-
+		long differenz = (long) value1 - (long) value2;
+		if (differenz > Integer.MAX_VALUE) {
+			throw new ArithmeticException("Differenz ist grösser als Integer.MAX_VALUE");
+		}else if (differenz < Integer.MIN_VALUE) {
+			throw new ArithmeticException("Differenz ist kleiner als Integer.MIN_VALUE");
+		} else {
+			return value1 - value2;
+		}
 	}
 
 	public int division(int value1, int value2) {
