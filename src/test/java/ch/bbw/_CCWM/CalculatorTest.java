@@ -85,6 +85,11 @@ public class CalculatorTest {
 		assertTrue(testee.differenz(-10, -20) == 10);
 	}
 	
+	@Test
+	public void testSubtractionZweiNegativeArithmeticExceptionNotRaised() throws IndexOutOfBoundsException  {
+		testee.differenz((-5), (-5));
+	}
+	
 	//8 Test mit Divisio
 	
 	@Test(expected = ArithmeticException.class)
