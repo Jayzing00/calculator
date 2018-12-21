@@ -22,6 +22,6 @@ public class App
          valueB = 20;
          System.out.println("Summe: " + valueA + " + " + valueB + " = " + calc.summe(valueA, valueB));
          System.out.println("Differenz: " + valueB + " - " + valueA + " = " + calc.differenz(valueB, valueA));
-
+         System.out.println("Division: " + valueB + " / " + valueA + " = " + calc.division(valueB, valueA));
     }
 }
