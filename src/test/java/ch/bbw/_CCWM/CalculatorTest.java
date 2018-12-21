@@ -46,9 +46,9 @@ public class CalculatorTest {
 		assertEquals(5, testee.summe(2, 3));
 	}
 	
-	@Test
+	@Test(expected=ArithmeticException.class)
 	public void testSummeMaxValue() {	
-		assertEquals(testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE), -2);
+		assertTrue(testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -1);
 	}
 	
 	@Test
@@ -63,7 +63,10 @@ public class CalculatorTest {
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
 	
-
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testSummeEinePositiveEineMaxValueArithmeticException() {
+		testee.summe(10, Integer.MAX_VALUE);
+	}
 	
 	
 	@Test(expected = ArithmeticException.class)

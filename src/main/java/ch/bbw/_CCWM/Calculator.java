@@ -8,9 +8,16 @@ package ch.bbw._CCWM;
 
 public class Calculator {
 
-	public int summe(int summand1, int summand2) {
+	public int summe(int summand1, int summand2) throws java.lang.ArithmeticException{
 
-		return summand1 + summand2;
+		long summe = (long) summand1 + (long) summand2;
+		if (summe > Integer.MAX_VALUE) {
+			throw new ArithmeticException("Summe ist grösser als Integer.MAX_VALUE");
+		}else if (summe < Integer.MIN_VALUE) {
+			throw new ArithmeticException("Summe ist kleiner als Integer.MIN_VALUE");
+		} else {
+			return summand1 + summand2;
+		}
 
 	}
 	
