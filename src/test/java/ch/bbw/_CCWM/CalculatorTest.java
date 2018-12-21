@@ -47,5 +47,16 @@ public class CalculatorTest {
 		/* protected */ public void testDivisionZweiPositiveIsOk() {
 			assertTrue(testee.division(10, 2) == 5);
 		}
+		
+		// Damit ich hier die Sichtbarkeit zu private setzen kann müsste ich dp4j
+		// benutzen und eine reflection injected. Dies ist aber zu Aufwändig für dieses
+		// kleine Projekt.
+		// Ausserdem wird empfohlen die private Tests in eine eigene Klasse zu stecken,
+		// damit sie die Wiederverwendbarkeit fördern.
+		@Test
+		/* private */public void testDivisionGleicheZahlenIsOk() {
+			assertTrue(testee.division(10, 10) == 1);
+
+		}
 
 }
