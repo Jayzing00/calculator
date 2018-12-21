@@ -51,12 +51,18 @@ public class CalculatorTest {
 		assertEquals(testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE), -2);
 	}
 	
+	@Test
+	public void testSummeMaxValueMinValue() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+	}
+
 	
 	
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
+	
 
 	
 	
