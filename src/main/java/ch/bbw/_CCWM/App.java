@@ -11,8 +11,8 @@ public class App
     public static void main( String[] args )
     {
     	 Calculator calc = new Calculator();
-         int valueA = 0;
-         int valueB = 0;
+         int valueA = 10;
+         int valueB = 20;
          
          System.out.println("Console Calculator");
          System.out.println("==================");
@@ -21,5 +21,7 @@ public class App
          valueA = 10;
          valueB = 20;
          System.out.println("Summe: " + valueA + " + " + valueB + " = " + calc.summe(valueA, valueB));
+         System.out.println("Differenz: " + valueB + " - " + valueA + " = " + calc.differenz(valueB, valueA));
+
     }
 }
