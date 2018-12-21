@@ -40,5 +40,12 @@ public class CalculatorTest {
 	public void testDivisionArithmeticExceptionNotThrown() throws ArithmeticException {
 		testee.division(10, 2);
 	}
+	
+	// Damit ich die Sichtbarkeit bei diesem Test zu "protected" machen kann, müsste
+	// die Klasse im selben Paket sein wie die Klasse welche getestet wird.
+		@Test
+		/* protected */ public void testDivisionZweiPositiveIsOk() {
+			assertTrue(testee.division(10, 2) == 5);
+		}
 
 }
