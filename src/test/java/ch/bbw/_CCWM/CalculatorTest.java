@@ -76,8 +76,13 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testDifferenzZweiGleichIstOk() {
+	public void testDifferenzZweiGleichIsOk() {
 		assertTrue(testee.differenz(10, 10) == 0);
+	}
+	
+	@Test
+	public void testDifferenzZweiNegativIsOk() {
+		assertTrue(testee.differenz(-10, -20) == 10);
 	}
 	
 	//8 Test mit Divisio
