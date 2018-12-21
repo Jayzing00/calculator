@@ -138,5 +138,10 @@ public class CalculatorTest {
 	public void testDivisionEinePositivEineNegativIsOk() {
 		assertTrue(testee.division(10, (-2)) == (-5));
 	}
+	
+	@Test
+	public void testDivisionEineMaxValueEinePositivIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, 2) == Integer.MAX_VALUE / 2);
+	}
 
 }
