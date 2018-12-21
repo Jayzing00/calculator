@@ -21,6 +21,8 @@ public class CalculatorTest {
 		testee = new Calculator();
 	}
 
+	//8 Test mit Summe
+	
 	@Test
 	public void testSummeZweiPositiveIsOk() {
 		assertTrue(testee.summe(10, 25) == 35);
@@ -56,18 +58,24 @@ public class CalculatorTest {
 		assertTrue(testee.summe(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
 	}
 
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testSummeEinePositiveEineMaxValueArithmeticException() {
+		testee.summe(10, Integer.MAX_VALUE);
+	}
 	
+	//8 Test mit Differenz
 	
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
 	
-	@Test(expected=java.lang.ArithmeticException.class)
-	public void testSummeEinePositiveEineMaxValueArithmeticException() {
-		testee.summe(10, Integer.MAX_VALUE);
+	@Test
+	public void testDifferenzEinNegativEinPositivIsOk() {
+		assertTrue(testee.differenz((-5), 10) == (-15));
 	}
-	
+
+	//8 Test mit Divisio
 	
 	@Test(expected = ArithmeticException.class)
 	public void testDivisionArithmeticException() {
