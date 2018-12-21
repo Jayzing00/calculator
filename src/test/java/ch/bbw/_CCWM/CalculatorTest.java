@@ -41,6 +41,10 @@ public class CalculatorTest {
 		assertTrue(testee.summe(0, 10) == 10);
 	}
 	
+	@Test
+	public void testSummeEquals() {
+		assertEquals(5, testee.summe(2, 3));
+	}
 	
 	
 	
