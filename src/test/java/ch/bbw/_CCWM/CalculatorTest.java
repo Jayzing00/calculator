@@ -96,6 +96,11 @@ public class CalculatorTest {
 	}
 	
 	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDifferenzEinePositiveEineMinValueArithmeticException() {
+		testee.differenz(20, Integer.MIN_VALUE);
+	}
+	
+	@Test(expected=java.lang.ArithmeticException.class)
 	public void testDifferenzEineMinValueEineMaxValueArithmeticException() {
 		testee.differenz(Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
