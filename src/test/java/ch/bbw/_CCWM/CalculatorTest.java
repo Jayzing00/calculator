@@ -23,13 +23,11 @@ public class CalculatorTest {
 	
 	@Test
 	public void testSummeZweiPositiveIsOk() {
-		testee = new Calculator();
 		assertTrue(testee.summe(10, 25) == 35);
 	}
 	
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
-		testee = new Calculator();
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
 
