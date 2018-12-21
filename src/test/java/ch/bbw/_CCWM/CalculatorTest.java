@@ -2,7 +2,9 @@ package ch.bbw._CCWM;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
+
 
 /**
  * Calculator Test
@@ -14,15 +16,18 @@ public class CalculatorTest {
 
 	Calculator testee;
 	
+	@Before
+	public void setup() {
+		testee = new Calculator();
+	}
+	
 	@Test
 	public void testSummeZweiPositiveIsOk() {
-		testee = new Calculator();
 		assertTrue(testee.summe(10, 25) == 35);
 	}
 	
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
-		testee = new Calculator();
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
 
