@@ -30,5 +30,15 @@ public class CalculatorTest {
 	public void testDifferenzZweiPositiveIsOk() {
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
+	
+	@Test(expected = ArithmeticException.class)
+	public void testDivisionArithmeticException() {
+		testee.division(10, 0);
+	}
+
+	@Test
+	public void testDivisionArithmeticExceptionNotThrown() throws ArithmeticException {
+		testee.division(10, 2);
+	}
 
 }
