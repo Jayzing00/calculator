@@ -133,5 +133,10 @@ public class CalculatorTest {
 	/* private */public void testDivisionGleicheZahlenIsOk() {
 		assertTrue(testee.division(10, 10) == 1);
 	}
+	
+	@Test
+	public void testDivisionEinePositivEineNegativIsOk() {
+		assertTrue(testee.division(10, (-2)) == (-5));
+	}
 
 }
