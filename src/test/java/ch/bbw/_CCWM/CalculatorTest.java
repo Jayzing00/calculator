@@ -36,5 +36,9 @@ public class CalculatorTest {
 		testee.division(10, 0);
 	}
 
+	@Test
+	public void testDivisionArithmeticExceptionNotThrown() throws ArithmeticException {
+		testee.division(10, 2);
+	}
 
 }
