@@ -86,6 +86,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testDifferenzZweiNullIsNull() {
+		assertTrue(testee.differenz(0, 0) == 0);
+	}
+	
+	@Test
 	public void testDifferenzZweiNegativeArithmeticExceptionNotRaised() throws IndexOutOfBoundsException  {
 		testee.differenz((-7), (-7));
 	}
