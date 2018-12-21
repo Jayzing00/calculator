@@ -46,6 +46,10 @@ public class CalculatorTest {
 		assertEquals(5, testee.summe(2, 3));
 	}
 	
+	@Test
+	public void testSummeMaxValue() {	
+		assertEquals(testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE), -2);
+	}
 	
 	
 	
