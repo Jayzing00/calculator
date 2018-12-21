@@ -58,7 +58,7 @@
 						<archive>
 							<manifest>
 								<addClasspath>true</addClasspath>
-								<mainClass>ch.bbw.consolecalculator.App</mainClass>
+								<mainClass>ch.bbw._CCWM.App</mainClass>
 							</manifest>
 						</archive>
 					</configuration>
