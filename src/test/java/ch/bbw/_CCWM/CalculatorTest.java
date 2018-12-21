@@ -37,6 +37,15 @@ public class CalculatorTest {
 	}
 
 	@Test
+	public void testSummeNullUndEinPositiv() {
+		assertTrue(testee.summe(0, 10) == 10);
+	}
+	
+	
+	
+	
+	
+	@Test
 	public void testDifferenzZweiPositiveIsOk() {
 		assertTrue(testee.differenz(25, 10) == 15);
 	}
