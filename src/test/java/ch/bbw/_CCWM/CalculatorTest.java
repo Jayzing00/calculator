@@ -86,8 +86,13 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testSubtractionZweiNegativeArithmeticExceptionNotRaised() throws IndexOutOfBoundsException  {
-		testee.differenz((-5), (-5));
+	public void testDifferenzZweiNegativeArithmeticExceptionNotRaised() throws IndexOutOfBoundsException  {
+		testee.differenz((-7), (-7));
+	}
+	
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDifferenzEineMinValueEineMaxValueArithmeticException() {
+		testee.differenz(Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
 	
 	//8 Test mit Divisio
