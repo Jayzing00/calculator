@@ -31,6 +31,10 @@ public class CalculatorTest {
 		assertTrue(testee.summe(10, -20) == -10);
 	}
 
+	@Test
+	public void testSummeZweiNegativ() {
+		assertTrue(testee.summe(-15, -6) == -21);
+	}
 
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
