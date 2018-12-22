@@ -35,7 +35,14 @@ public class Calculator {
 
 	public int division(int value1, int value2) {
 
-		return value1 / value2;
+		long division = (long) value1 / (long) value2;
+		if (division > Integer.MAX_VALUE) {
+			throw new ArithmeticException("Division ist grösser als Integer.MAX_VALUE");
+		}else if (division < Integer.MIN_VALUE) {
+			throw new ArithmeticException("Division ist kleiner als Integer.MIN_VALUE");
+		} else {
+			return value1 / value2;
+		}
 
 	}
 	
