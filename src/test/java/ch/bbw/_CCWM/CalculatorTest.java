@@ -175,4 +175,10 @@ public class CalculatorTest {
 	public void testMultiplikationEinePositivEinNullIsOk() {
 		assertTrue(testee.multiplikation(0, 5) == (0));
 	}
+	
+	@Test
+	public void testMultiplikationZweiNegativIsOk() {
+		assertTrue(testee.multiplikation((-4), (-5)) == 20);
+	}
+	
 }
