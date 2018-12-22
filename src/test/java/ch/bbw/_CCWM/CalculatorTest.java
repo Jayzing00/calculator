@@ -21,7 +21,7 @@ public class CalculatorTest {
 		testee = new Calculator();
 	}
 
-	//8 Test mit Summe
+	//8 Tests mit Summe
 	
 	@Test
 	public void testSummeZweiPositiveIsOk() {
@@ -63,7 +63,7 @@ public class CalculatorTest {
 		testee.summe(10, Integer.MAX_VALUE);
 	}
 	
-	//8 Test mit Differenz
+	//8 Tests mit Differenz
 	
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
@@ -105,7 +105,7 @@ public class CalculatorTest {
 		testee.differenz(Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
 	
-	//8 Test mit Divisio
+	//8 Tests mit Division
 	
 	@Test(expected = ArithmeticException.class)
 	public void testDivisionArithmeticException() {
@@ -157,5 +157,12 @@ public class CalculatorTest {
 	@Test
 	public void testDivisionBeideMaxVeIsOk() {
 		assertTrue(testee.division((Integer.MAX_VALUE+1), 2) == (Integer.MAX_VALUE+1) / 2);
+	}
+	
+	//4 Test mit Multiplikation
+	
+	@Test
+	public void testMultiplikationZweiPositivIsOk() {
+		assertTrue(testee.multiplikation(4, 5) == 20);
 	}
 }
