@@ -1,3 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: VtUG2yZrKQJ1GH6EqxD8aisZOrrr7M0XiDVikGvq5qmxUIvWtPGNApbepPJaF6euF9F27LD8mWbwxVggBgiahCU2RcmcaVUlBqz1z4fHBet3f1gNzVGHN9wMez9xJr/BhFG0pC4SsFDfWNRI+BqBLUo2G6K46hiE8j7kyR7gAhw8pqfFz6MDGgPFvMawnSpHCpUoTZelh1uokqleSwO9HS693NJKCs46wrh9QAlZG4gpuPVR86SWzdqYH/YDSICPh0NBZue8QdFsIkwP8L2oMSje/2fd/yo+nr0WXdf/ChZaJNnEfHAgjiMuI974XtEUUlLAIiUHxkc313np8zVNSYiyjiul0Yxvl3BjnB8ZOTFm17Q115YwBbDKSbqJssjQUwYXvCVGVg8VQG/qvpgyd9lnimz6hnIDGX68/60J+WNaA5aWakNSnr+triSayPlGK1nUcvbhmbwQMLUGygKkkPY5IQ+nypSuukFzjUCHI1zDkQ5YbwRQS6c4/wr4cFgdQOIpqemP3s9C5R5ITOySpjQ5QggpwcvlWC5TdI/EoKQ6vHFCTjs/Kp2Dn9GBOemD9lo8wim8w1Cm3shRf89mXZaoIEzsJgA1LBJw1eC2+xQ7XTFEmHekbUTk0QjUUjj97W/DLkHdobgHDT+gGz0pZigkLuH9TBdnvldPSpSm0c0=
+  file: "/home/travis/.m2/repository/ch/bbw/Calculator/0.0.1-SNAPSHOT/Calculator-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: Jayzing00/calculator
