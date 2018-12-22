@@ -186,4 +186,8 @@ public class CalculatorTest {
 		testee.multiplikation(Integer.MAX_VALUE, Integer.MAX_VALUE);
 	}
 	
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testMultiplikationBeideMinValueArithmeticException() {
+		testee.multiplikation(Integer.MIN_VALUE, Integer.MIN_VALUE);
+	}
 }
