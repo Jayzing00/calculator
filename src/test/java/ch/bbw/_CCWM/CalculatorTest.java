@@ -133,5 +133,29 @@ public class CalculatorTest {
 	/* private */public void testDivisionGleicheZahlenIsOk() {
 		assertTrue(testee.division(10, 10) == 1);
 	}
+	
+	@Test
+	public void testDivisionEinePositivEineNegativIsOk() {
+		assertTrue(testee.division(10, (-2)) == (-5));
+	}
+	
+	@Test
+	public void testDivisionEineMaxValueEinePositivIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, 2) == Integer.MAX_VALUE / 2);
+	}
 
+	@Test
+	public void testDivisionEineMinValueEinePositivIsOk() {
+		assertTrue(testee.division(Integer.MIN_VALUE, 2) == Integer.MIN_VALUE / 2);
+	}
+	
+	@Test
+	public void testDivisionBeideMaxValueIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == Integer.MAX_VALUE / Integer.MAX_VALUE);
+	}
+	
+	@Test
+	public void testDivisionBeideMaxVeIsOk() {
+		assertTrue(testee.division((Integer.MAX_VALUE+1), 2) == (Integer.MAX_VALUE+1) / 2);
+	}
 }
