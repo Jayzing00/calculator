@@ -159,7 +159,7 @@ public class CalculatorTest {
 		assertTrue(testee.division((Integer.MAX_VALUE+1), 2) == (Integer.MAX_VALUE+1) / 2);
 	}
 	
-	//4 Test mit Multiplikation
+	//6 Test mit Multiplikation
 	
 	@Test
 	public void testMultiplikationZweiPositivIsOk() {
@@ -179,6 +179,11 @@ public class CalculatorTest {
 	@Test
 	public void testMultiplikationZweiNegativIsOk() {
 		assertTrue(testee.multiplikation((-4), (-5)) == 20);
+	}
+	
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testMultiplikationZweiMaxValueArithmeticException() {
+		testee.multiplikation(Integer.MAX_VALUE, Integer.MAX_VALUE);
 	}
 	
 }
